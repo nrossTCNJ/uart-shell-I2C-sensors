@@ -9,7 +9,7 @@ This project adds onto my previous project, the UART Command Shell, by exploring
 3. I2C Write\
    The MPU-6500 was waken from sleep so that the accelerometer, temperature, and gyroscope metrics could be configured. To do this, an i2c_write() function was created that was similar to the read function, except that it only has one START condition and never switches to read mode. 
 4. Burst Read\
-   An I2C burst read function was created that reads all 14 bytes of sensor data in one transaction and converts the raw data into physical units. This meant accepting reading all 14 bytes in one transaction instead of reading one byte for 14 transactions. Next, the raw MPU data was converted to physical units using formulas provided on the MPU-6500 datasheet. 
+   An I2C burst read function was created that reads all 14 bytes of sensor data in one transaction and converts the raw data into physical units. This meant reading all 14 bytes in one transaction instead of reading one byte for 14 transactions. Next, the raw MPU data was converted to physical units using formulas provided on the MPU-6500 datasheet. 
 5. Stream Read\
    A "stream" command was created to get frequent, real-time readings of MPU sensor data, with an additional "stop" command ended to end this stream. 
 
