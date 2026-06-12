@@ -11,7 +11,7 @@ This project adds onto my previous project, the UART Command Shell, by exploring
 4. Burst Read\
    An I2C burst read function was created that reads all 14 bytes of sensor data in one transaction and converts the raw data into physical units. This meant reading all 14 bytes in one transaction instead of reading one byte for 14 transactions. Next, the raw MPU data was converted to physical units using formulas provided on the MPU-6500 datasheet. 
 5. Stream Read\
-   A "stream" command was created to get frequent, real-time readings of MPU sensor data, with an additional "stop" command ended to end this stream. 
+   A "stream" command was created to get frequent, real-time readings of MPU sensor data, with an additional "stop" command to end this stream. 
 
 # What was learned overall
 This project reinforced and introduced topics related to embedded systems including the I2C protocol, register and clock configuration, open-drain and alternate function modes, master and slave devices, bare-metal programming, and blocking vs. non-blocking mode. The next part to be implented in the next project will be timers for interrupts, which will make the stream read of sensor data much smoother. Additionally, this project still has great potential for future additions such as LED PWM manipulation or communication with an LCD.
